@@ -1,0 +1,45 @@
+-- Identified Entities & Attributes
+staff: 
+    staff_id INT, 
+    first_name VARCHAR, 
+    last_name VARCHAR, 
+    position VARCHAR, 
+    start_date DATE, 
+    location VARCHAR
+
+sales_outlet: 
+    sales_outlet_id INT, 
+    sales_outlet_type VARCHAR, 
+    address VARCHAR, 
+    city VARCHAR, 
+    telephone VARCHAR, 
+    postal_code INT, 
+    manager INT
+
+sales_transaction:
+    transaction_id INT,
+    transaction_date DATE,
+    transaction_time TIME,
+    sales_outlet_id INT,
+    staff_id INT,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    price DECIMAL(10,2)
+
+customer:
+    customer_id INT,
+    customer_name VARCHAR,
+    customer_email VARCHAR,
+    customer_since DATE,
+    customer_card_number VARCHAR,
+    birthdate DATE,
+    gender CHAR(1)
+
+product:
+    product_id INT,
+    product_category VARCHAR,
+    product_type VARCHAR,
+    product_name VARCHAR,
+    description VARCHAR,
+    price DECIMAL(10,2)
